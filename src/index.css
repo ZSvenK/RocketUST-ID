@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sapBrandColor: #1275bb;
+  --sapHighlightColor: #0070f2;
+  --sapSelectedColor: #1275bb;
+  --sapActiveColor: #0b4a79;
+  --sapGroup_ContentBackground: #ffffff;
+  --sapGroup_ContentBorderColor: #d9e0e7;
+  --sapShell_Background: #001a33;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f6f8;
+  color: #1d2d3e;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f3f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5ced6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9aa9b8;
+}
+
+/* SAP Fiori Meta Tile */
+.fiori-meta-tile {
+  background: #ffffff;
+  border: 1px solid #d9e0e7;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.15s ease-in-out;
+}
+.fiori-meta-tile:hover {
+  border-color: #1275bb;
+  box-shadow: 0 2px 8px rgba(18, 117, 187, 0.12);
+}
+
+/* Monospace for IDs */
+.font-mono-code {
+  font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+}
+
+/* Pulse animation for active processing */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.animate-pulse-subtle {
+  animation: pulse-subtle 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
